@@ -32,7 +32,7 @@ When Docker pulls an image, each layer is pulled individually. However, there ma
     docker image save mikesir87/mystery-image | tar -x
     ```
 
-    Run `ls` to look at the contents. We'll see lots of folders with super long names, a `manifest.json`, and a INSERT.
+    Run `ls` to look at the contents. We'll see lots of folders with super long names, a `manifest.json`, and a few other metadata files.
 
 2. Since we're going to be looking at several JSON objects, let's install the `jq` utility.
 
@@ -40,18 +40,18 @@ When Docker pulls an image, each layer is pulled individually. However, there ma
     apt-get update && apt-get install -y jq
     ```
 
-3. Now, let's look at the `layers.json`. Run the following command:
+3. Now, let's look at the `manifest.json`. Run the following command:
 
     ```
-    jq layers.json
+    jq . manifest.json
     ```
 
     Looking at the output, we'll see several keys. If we look at the `layers` key, we'll see file paths to various tar files. Each of these contains the file system changes that occurred while that layer was being built. Let's take a look at one.
 
-4. Let's take a look at layer INSERT. Judging by the image history and the order of the layers in the `layers.json`, this should be the layer that's copying lots of files in. Let's take a look!
+4. Let's take a look at layer starting with `6a6d515f`. Judging by the image history and the order of the layers in the `manifest.json`, this should be the layer that's copying lots of files in. Let's take a look!
 
     ```
-    cd INSERT_LAYER_ID
+    cd 6a6d515f9f7dec5f2a0a705bf7640376132e7d78773fc96faae5990ffd543bc5
     tar xvf layer.tar
     ```
 
