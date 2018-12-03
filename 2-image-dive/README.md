@@ -14,7 +14,7 @@ Every image is composed of immutable layers. When each layer is created, the exe
 1. Remove the PWD instances you already created and create a new instance (get a fresh start).
 2. Run `docker pull history mikesir87/mystery-image`. This will pull the image that we are going to use.
 3. Run `docker image history mikesir87/mystery-image`. This display all of the layers, as well as the command.
-3. One thing you'll notice as that the instructions are truncated. By adding the `—no-trunc` flag (strange how the flag to not truncate is truncated, right?), we can see the full output.
+3. One thing you'll notice as that the instructions are truncated. By adding the `--no-trunc` flag (strange how the flag to not truncate is truncated, right?), we can see the full output.
 
     ```
     docker image history --no-trunc mikesir87/mystery-image
