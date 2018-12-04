@@ -2,14 +2,14 @@
 
 In this first hands-on exercise, we're going to build our first container image, push it to Docker Hub, and then run a container using that image.
 
-**If you haven't done so yet**, [](create a Docker Hub account). You will need this to access Play with Docker and sharing images through Docker Hub.
+**If you haven't done so yet**, [create a Docker Hub account](https://hub.docker.com/). You will need this to access Play with Docker and sharing images through Docker Hub.
 
 ## Getting Started
 
 For the workshop, we will be using Play with Docker, a tool created by several Docker Captains to help you get up and running. Beyond it being a great tool, we don't have to rely on the conference's network speeds, as the containers and images are running remotely.
 
 1. Open your web browser to [https://play-with-docker.com](https://play-with-docker.com).
-2. Login using your Docker Hub account. If you don't have an account yet, [https://hub.docker.com/](you can do so here).
+2. Login using your Docker Hub account. If you don't have an account yet, [you can do so here](https://hub.docker.com).
 
 
 ## Creating and running our first Image
