@@ -38,7 +38,7 @@ As mentioned in the overview, the base `php:7-apache` image doesn't have the nec
 
 3. Remove the `image` declaration from the `app` service.
 
-4. Now, if you run `docker-compose up -d`, you should see an image be created and the application attempt to start. If we run the app, we get an error indicating:
+4. Now, if you run `docker-compose up -d`, you should see an image be created and the application attempt to start. If we open the app at [http://localhost/](http://localhost), we get the following error:
 
 > Connection failed: No such file or directory
 
