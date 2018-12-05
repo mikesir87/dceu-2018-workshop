@@ -38,7 +38,7 @@ When Docker pulls an image, each layer is pulled individually. However, there ma
 2. Since we're going to be looking at several JSON objects, let's install the `jq` utility.
 
     ```
-    apt-get update && apt-get install -y jq
+    apk add --update jq
     ```
 
 3. Now, let's look at the `manifest.json`. Run the following command:
