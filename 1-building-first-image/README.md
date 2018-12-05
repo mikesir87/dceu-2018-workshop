@@ -8,7 +8,7 @@ In this first hands-on exercise, we're going to build our first container image,
 
 For the workshop, we will be using Play with Docker, a tool created by several Docker Captains to help you get up and running. Beyond it being a great tool, we don't have to rely on the conference's network speeds, as the containers and images are running remotely.
 
-1. Open your web browser to [https://play-with-docker.com](https://play-with-docker.com).
+1. Open your web browser to [http://play-with-docker.com](http://play-with-docker.com).
 2. Login using your Docker Hub account. If you don't have an account yet, [you can do so here](https://hub.docker.com).
 
 
