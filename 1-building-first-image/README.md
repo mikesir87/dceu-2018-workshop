@@ -20,7 +20,7 @@ As we discussed, images are best created and maintained using Dockerfiles. These
 2. In the `exercise1` directory, create a file named `index.php`. In that file, we're going to create the simplest PHP application:
 
     ```php
-    <?php phpinfo();
+    <?php phpinfo();?>
     ```
 
 3. Now, create a file named `Dockerfile`. In the file, put the following:
@@ -48,7 +48,7 @@ As we discussed, images are best created and maintained using Dockerfiles. These
     docker container run -p 80:80 -d my-first-php-image
     ```
 
-    - The `-p` flag tells the Docker Engine that we want to create a mapping of port 80 on the host (the left-side of the argument) to port 80 of the container (the right side). 
+    - The `-p` flag tells the Docker Engine that we want to create a mapping of port 80 on the host (the left-side of the argument) to port 80 of the container (the right side).
     - The `-d` flag tells the Docker Engine that we want to run the new container in 'detached mode'. In other words, simply run it in the background.
 
 6. At this point, you should see a small badge appear at the top of the page with the number '80' in it. Clicking this badge will open a URL to port 80 for your container.
@@ -69,15 +69,15 @@ The image you just created exists only on the machine that performed the build. 
 2. All images (except Official Images) in Docker Hub are namespaced. For example, if I push images, they aren't going to simply named `my-first-php-image`, as it doesn't convey _who_ it comes from, but creates a nightmare trying to ensure my image doesn't collide with yours. To fix this, my image would be named `mikesir87/my-first-php-image`. Using the `docker tag` command, we can provide another name for the image we built earlier.
 
     ```
-    # Replace mikesir87 with your Docker Hub username
-    docker tag my-first-php-image mikesir87/my-first-php-image
+    # Replace <username> with your Docker Hub username
+    docker tag my-first-php-image <username>/my-first-php-image
     ```
 
 3. Now that we're authenticated and we have our image tagged correctly, let's push it!
 
     ```
-    # Replace mikesir87 with your Docker Hub username
-    docker push mikesir87/my-first-php-image
+    # Replace <username> with your Docker Hub username
+    docker push <username>/my-first-php-image
     ```
 
 4. Open your browser to your repo and you should see the new image!
@@ -91,8 +91,8 @@ With PWD, it's easy to get a new instance. With it being a new instance, the onl
 2. In the terminal for our new instance, run the following:
 
     ```
-    # Replace mikesir87 with your Docker Hub username
-    docker container run -p 80:80 -d mikesir87/my-first-php-image
+    # Replace <username> with your Docker Hub username
+    docker container run -p 80:80 -d <username>/my-first-php-image
     ```
 
     We'll see the image get pulled from Docker Hub and start up. Magic, huh?
@@ -102,7 +102,7 @@ With PWD, it's easy to get a new instance. With it being a new instance, the onl
 
 ## Wrap-up
 
-While this was a pretty simple application, let's think about what was needed to run the application. 
+While this was a pretty simple application, let's think about what was needed to run the application.
 
 - We needed a PHP runtime engine, an Apache HTTP server, and a PHP script. Before containers, we would have needed to have a machine that had the correct versions installed and make the script available. But, **our container image shipped everything it needed to run.**
 - We created our container image using a Dockerfile, which assures our application is consistent no matter where we build it. With it being a text file, the full environment of our application can be version controlled!
