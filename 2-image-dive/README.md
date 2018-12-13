@@ -67,7 +67,7 @@ When Docker pulls an image, each layer is pulled individually. However, there ma
 
 ## Handling file deletions
 
-Now that you've captured the flag, let's see if the details are in the final image. If we run `docker container run -it mikesir87/mystery-image ls /app/src`, we see the `app.js` file. But, we don't see the `settings.js` file. What gives?
+Now that you've captured the flag, let's see if the details are in the final image. If we run `docker container run -it mikesir87/mystery-image ls /app/src`, we see the `index.js` file. But, we don't see the `settings.js` file. What gives?
 
 Remember that image layers are immutable. Once created, the layer is never changed. So, how are file removals represented in the layer's tar? Let's take a look.
 
