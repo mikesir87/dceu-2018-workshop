@@ -80,7 +80,7 @@ The image you just created exists only on the machine that performed the build. 
     docker push mikesir87/my-first-php-image
     ```
 
-4. Open your browser to your repo and you should see the new image!
+4. Open your browser to [Docker Hub](https://hub.docker.com) and you should see the new repo! Feel free to click on it and see the "Pushed X minutes ago."
 
 
 ## Running our Image
