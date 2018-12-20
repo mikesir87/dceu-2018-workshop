@@ -17,7 +17,7 @@ In the workshop, we talked about creating a basic multi-service application. But
 
 As mentioned in the overview, the base `php:7-apache` image doesn't have the necessary MySQL extensions installed. To fix this, we will create our own image and update our compose file to use it!
 
-1. In the workshop directory, create a new `Dockerfile`. In it, place the following:
+1. In the workshop directory, create a new [`Dockerfile`](./Dockerfile). In it, place the following:
 
     ```
     FROM php:7-apache
